@@ -15,8 +15,8 @@ def extract_video_clip(input_file, output_folder):
     output_file = os.path.join(output_folder, os.path.basename(input_file))
     output_file = os.path.splitext(output_file)[0] + f"_clip_0-20s.mp4"
 
-    start_time = 5 * 60 + 27  # 1 minute 20 seconds
-    end_time = 5 * 60 + 46  # 2 minute 20 seconds
+    start_time = 5 * 60 + 27  # 5 minute 27 seconds
+    end_time = 5 * 60 + 46  # 5 minute 46 seconds
 
     video_clip = VideoFileClip(input_file).subclip(start_time, end_time)
     video_clip.write_videofile(output_file)
